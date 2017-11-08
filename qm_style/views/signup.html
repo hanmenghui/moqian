@@ -1,0 +1,114 @@
+{%extends 'base.html'%}
+<!--end-->
+{%block head%}
+<link rel='stylesheet' href='/css/signup.css'>
+<!--style end-->
+{%endblock%}
+<!--body-->
+{%block body%}
+<div class="main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 page-content">
+                <div class="inner-box category-content">
+                    <h2 class="title-2"><i class="icon-user-add"></i> 创建账户 </h2>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <form class="form-horizontal">
+                                <fieldset>
+                                    <div class="form-group required">
+                                        <label class="col-md-4 control-label">姓名 </label>
+                                        <div class="col-md-6">
+                                            <input name="" placeholder="请输入您的姓名" class="form-control input-md" required="" type="text">
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label">性别 </label>
+                                        <div class="col-md-6">
+                                            <div class="radio">
+                                                <label for="Gender-0">
+                                                    <input name="Gender" id="Gender-0" value="1" checked="checked" type="radio">男 </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label for="Gender-1">
+                                                    <input name="Gender" id="Gender-1" value="2" type="radio">女 </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group required">
+                                        <label for="inputEmail3" class="col-md-4 control-label">注册邮箱</label>
+                                        <div class="col-md-6">
+                                            <div class="input-group margin-bottom-sm">
+                                                <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                                                <input class="form-control" type="text" placeholder="常用邮箱">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group required">
+                                        <label for="inputPassword3" class="col-md-4 control-label">密码 </label>
+                                        <div class="col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                                <input class="form-control" type="password" placeholder="Password">
+                                            </div>
+                                            <p class="help-block">至少6个字符
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group required">
+                                        <label class="col-md-4 control-label">手机号 </label>
+                                        <div class="col-md-6">
+                                            <div class="input-group margin-bottom-sm">
+                                                <span class="input-group-addon"><i class="fa fa-mobile-phone fa-fw"></i></span>
+                                                <input class="form-control" type="text" placeholder="Phone Number">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group required">
+                                        <label class="col-md-4 control-label">验证码 </label>
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-7  margin-bottom-sm">
+                                                    <input class="form-control" type="text" placeholder="请输入短信验证码">
+                                                </div>
+                                                <div class="col-md-4  btn btn-default disabled">
+                                                    <a ng-click="resend()">获取验证码</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <div class="form-group">
+                                            <label class="col-md-4 control-label"></label>
+                                            <div class="col-md-8">
+                                                <div class="termbox mb10">
+                                                    <label class="checkbox-inline" for="checkboxes-1">
+                                                    <input name="checkboxes" id="checkboxes-1" value="1" type="checkbox">
+                                                    同意 <a href="terms-conditions.html">《LTP条款》</a> </label>
+                                                </div>
+                                                <div style="clear:both"></div>
+                                                <a class="btn btn-primary" href="account-home.html">注册</a></div>
+                                        </div>
+                                </fieldset>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    {%endblock%}

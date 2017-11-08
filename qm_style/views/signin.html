@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+<!--end-->
+{%block head%}
+<link rel='stylesheet' href='/css/signin.css'>
+<!--style end-->
+{%endblock%}
+<!---->
+{%block body%}
+<div class="main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 login-box">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form role="form" method="POST" action="/signin">
+                            <div class="form-group">
+                                <label for="sender-email" class="control-label">用户名:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span><input type="text" autofocus="autofocus" class="form-control" placeholder="邮箱/手机号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="user-pass" class="control-label">密码:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock"></i></span><input type="password" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <a href="/signin_post" class="btn btn-primary  btn-block">登录</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="checkbox pull-left">
+                            <label> <input type="checkbox" value="1" name="remember" id="remember"> 记住我</label>
+                        </div>
+                        <p class="text-center pull-right"><a href="/forgot-pwd"> 忘记密码? </a></p>
+                        <div style=" clear:both"></div>
+                    </div>
+                </div>
+                <div class="login-box-btm text-center">
+                    <p> 还没有账号? <br>
+                        <a href="/signup"><strong>立即注册 !</strong> </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

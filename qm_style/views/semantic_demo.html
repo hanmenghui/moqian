@@ -1,0 +1,421 @@
+{%extends "base.html"%}
+<!---->
+{%block head%}
+<style>
+    .analysis-header {
+        margin: 40px 0 10px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .intro {
+        width: 100%;
+        background-image: url(/img/bg/semantic_demo_bg.jpg);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 450px;
+        transition: all 400ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+        -webkit-transition: all 400ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+    }
+    
+    .dtable {
+        display: table;
+    }
+    
+    .intro .container {
+        max-width: 800px;
+    }
+    
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .dtable-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    
+    .hw100 {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .intro h1,
+    .intro-title {
+        color: #fff;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-size: 44px;
+        line-height: 42px;
+        font-weight: bold;
+        letter-spacing: -0.3px;
+        margin-bottom: 10px;
+        padding-bottom: 0;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        transition: font 400ms cubic-bezier(0.25, 0.1, 0.25, 1) 0s;
+    }
+    
+    .intro p {
+        color: #e8eced;
+        font-size: 18px;
+        font-weight: 300;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    body {
+        background: #EEEEEE;
+    }
+    
+    .analysis_wrap {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border-radius: 3px 3px;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 1px rgba(180, 180, 180, 0.5);
+        margin-bottom: 10px;
+        padding: 10px 10px;
+    }
+    
+    .analysis_wrap .analysis_content {
+        width: 100%;
+        padding: 4px 4px 40px 4px;
+        height: 115px;
+    }
+    
+    .analysis_content {
+        position: relative;
+        width: 350px;
+        padding: 10px 6px 10px 15px;
+        height: 460px;
+        line-height: 24px;
+        font-size: 14px;
+        border-radius: 3px;
+        background-color: #FFF;
+        background-color: rgba(255, 255, 255, .9);
+        resize: none;
+        overflow: hidden;
+        outline: none;
+    }
+    
+    .analysis_wrap .analysis_content .txt {
+        width: 100%;
+        min-height: 100%;
+        outline: none;
+        border: 0 none;
+        background: none;
+        overflow-y: auto;
+        overflow-x: hidden;
+        font-size: 14px;
+        color: #2c2c2c;
+        padding-right: 72px;
+        padding-bottom: 0;
+    }
+    
+    .analysis_wrap .analysis_content .txt_warm {
+        font-size: 14px;
+        color: #1b7959;
+        position: absolute;
+        left: 8px;
+    }
+    
+    .analysis_wrap .analysis_content .icon_close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+    
+    .icon_close {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: url(/img/semantic/icon_close.png) no-repeat 0 0;
+        background-size: 100%;
+        cursor: pointer;
+    }
+    
+    textarea {
+        resize: none;
+    }
+    
+    .main-container {
+        margin-bottom: 30px;
+    }
+    
+    .btn-arrow {
+        padding: 0 0 0 0px;
+        width: 112px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 40px;
+    }
+    
+    a.btn.btn-radius,
+    input.btn.btn-radius {
+        border-radius: 4px;
+    }
+    
+    a.btn,
+    input.btn {
+        color: #fff;
+        background-color: #488fce;
+    }
+    
+    .main-title {
+        position: relative;
+        height: 32px;
+        font-size: 24px;
+        line-height: 32px;
+        color: #565656;
+    }
+    
+    .inner-box {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border-radius: 3px 3px;
+        padding: 20px 15px;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+    }
+    
+    .list-filter ul li a {
+        background: none repeat scroll 0 0 #ffffff;
+        border-radius: 2px;
+        margin-bottom: 1px;
+        display: block;
+        padding: 10px 15px 10px 5px;
+        position: relative;
+        color: #4e575d;
+    }
+    
+    .list-filter ul li span {
+        display: block;
+        padding: 10px 15px 10px 5px;
+    }
+    
+    .list-filter ul li a:hover {
+        background-color: #2a3744;
+        color: #FFFFFF;
+    }
+    
+    .list-filter ul ul {
+        padding-left: 15px;
+    }
+    
+    .btn-custom,
+    .btn-custom:hover,
+    .btn-custom:focus {
+        margin: 0px 5px 0 5px;
+        color: #fff !important;
+        padding: 9px 20px !important;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        -webkit-transition: all 400ms ease-in-out;
+        -moz-transition: all 400ms ease-in-out;
+        -o-transition: all 400ms ease-in-out;
+        transition: all 400ms ease-in-out;
+    }
+    
+    .btn-shuci {
+        background-color: #43cea2!important;
+    }
+    
+    .btn-mingci {
+        background-color: #ffcb99!important;
+    }
+    
+    .main-container .col-sm-9 .title {
+        font-size: 14px;
+    }
+    
+    .main-container .col-sm-9 .words {
+        margin: 9px 0 0 9px
+    }
+    
+    .main-container .col-sm-9 .words dd {
+        display: inline-block;
+        padding: 0 11px;
+        height: 26px;
+        font-size: 14px;
+        line-height: 26px;
+        margin: 0 5px 5px 0;
+    }
+    
+    .main-container .col-sm-9 .words .r {
+        background-color: #9acccd;
+    }
+    
+    .main-container .col-sm-9 .words .n {
+        background-color: #488fce;
+    }
+    
+    .main-container .col-sm-9 .words .d {
+        background-color: #ffcccb;
+    }
+    
+    .main-container .col-sm-9 .words .a {
+        background-color: #67ccaa;
+    }
+    
+    .main-container .col-sm-9 .words .ud {
+        background-color: #4dd9e6;
+    }
+    
+    .main-container .col-sm-9 .words .v {
+        background-color: #ffcb99;
+    }
+    
+    .result_tabs {
+        margin-top: 15px;
+    }
+    
+    a.docs {
+        float: right;
+    }
+</style>
+{%endblock%} {%block body%}
+
+<div class="intro">
+    <div class="dtable hw100">
+        <div class="dtable-cell hw100">
+            <div class="container text-center">
+                <h1 class="intro-title animated fadeInDown"> 畅游文本世界第一站： </h1>
+                <p class="sub animateme fittext3 animated fadeIn"> 以下为您提供词法类，句法类，篇章类，下载类四大模块功能的快速体验 </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="analysis-header">
+                    <span><p>输入一段想分析的文字：</p></span>
+                </div>
+                <div class="analysis_wrap">
+                    <div class="analysis_content ">
+                        <textarea class="txt" name="" id="input_sec1" limit="110">我们每个人最根本的不在于你现在有没有什么，而在于你有没一台自我发动机，有没有一种在我学习的驱动力</textarea>
+                        <i class="icon_close" id="sec1_clear"></i>
+                        <p class="txt_warm">体验版最多可输入110个字</p>
+
+                    </div>
+                    <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+                    <a class="btn btn-arrow btn-radius">提交文本</a>
+                </div>
+            </div>
+
+            <div class="main-title col-sm-12">
+                <span class="title">分析结果:</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <aside>
+                    <div class="inner-box">
+                        <div class="categories-list list-filter">
+
+
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="" href="#qingganfenxi">词性分析</a>
+                                </li>
+
+                                <li>
+                                    <a href="#yicunwenffa">依存文法</a>
+                                </li>
+
+                                <li>
+                                    <a href="#yuyilianxiang">语义联想</a>
+                                </li>
+
+                                <li>
+                                    <a href="#guanjiancitiqu">关键词提取</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+            </div>
+            <div class="col-sm-9">
+                <div id="qingganfenxi" class="inner-box">
+                    <div class="title">词性分析：
+                        <a class="docs" href="/wiki/getting_started" target="_blank">查看文档</a>
+                    </div>
+
+                    <dl class="words">
+                        <dd title="代词" class="r">我们</dd>
+                        <dd title="代词" class="r">每个</dd>
+                        <dd title="名词" class="n">人</dd>
+                        <dd title="副词" class="d">最</dd>
+                        <dd title="形容词" class="a">根本</dd>
+                        <dd title="助词" class="ud">的</dd>
+                        <dd title="副词" class="d">不</dd>
+                        <dd title="动词" class="v">在于</dd>
+                        <dd title="代词" class="r">你</dd>
+                        <dd title="时间词" class="t">现在</dd>
+                        <dd title="动词" class="vy">有</dd>
+                        <dd title="副词" class="d">没</dd>
+                        <dd title="动词" class="vy">有</dd>
+                        <dd title="代词" class="r">什么</dd>
+                        <dd title="标点符号" class="wd">，</dd>
+                        <dd title="连词" class="c">而</dd>
+                        <dd title="动词" class="v">在于</dd>
+                        <dd title="代词" class="r">你</dd>
+                        <dd title="动词" class="vy">有</dd>
+                        <dd title="副词" class="d">没</dd>
+                        <dd title="数词" class="m">一</dd>
+                        <dd title="量词" class="q">台</dd>
+                        <dd title="代词" class="r">自我</dd>
+                        <dd title="名词" class="n">发动机</dd>
+                        <dd title="标点符号" class="wd">，</dd>
+                        <dd title="动词" class="vy">有</dd>
+                        <dd title="副词" class="d">没</dd>
+                        <dd title="动词" class="vy">有</dd>
+                        <dd title="数词" class="m">一</dd>
+                        <dd title="量词" class="q">种</dd>
+                        <dd title="介词" class="p">在</dd>
+                        <dd title="代词" class="r">我</dd>
+                        <dd title="动词" class="v">学习</dd>
+                        <dd title="助词" class="ud">的</dd>
+                        <dd title="名词" class="n">驱动力</dd>
+                    </dl>
+                    <div class="result_tabs">
+                        <a class="btn btn-custom btn-shuci">数词</a>
+                        <a class="btn btn-custom btn-mingci">标点符号</a>
+                    </div>
+                </div>
+                <div class="inner-box">
+                    <div class="title">词性分析：
+                        <a class="docs" href="/wiki/getting_started" target="_blank">查看文档</a>
+                    </div>
+                    <dl class="words">
+                    </dl>
+                </div>
+                <div class="inner-box">
+                    <div class="title">依存文法：
+                        <a class="docs" href="/wiki/getting_started" target="_blank">查看文档</a>
+                    </div>
+                    <dl class="words">
+                    </dl>
+                </div>
+                <div class="inner-box">
+                    <div class="title">语义联想：
+                        <a class="docs" href="/wiki/getting_started" target="_blank">查看文档</a>
+                    </div>
+                    <dl class="words">
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
