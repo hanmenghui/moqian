@@ -1,17 +1,15 @@
 {%extends 'base.html'%}
-
 <!--end-->
 {%block body%}
-
 <!--/#navigation-->
-
+<script type="text/javascript" src="http://www.cnpcmall.com/ckplayer/ckplayer.js"></script>
 <div id="home-section-slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-         <div class="item item-four" style="background-image:url(/img/bg/slide4.jpg)">
+        <div class="item item-four" style="background-image:url(/img/bg/slide4.jpg)">
             <div class="container">
                 <div class="home-content text-center">
                     <h1>墨千设计</h1>
-                    <h2>彰显您的尊贵</h2>
+                    <h3 style="color:white;font-size:35px">为保留和创造万变景观</h3>
                     <div class="extra-info">
                         <p>公司主营室内外景观设计，小区广场，庭院设计等.一群绝不妥协的居住设计家 完成一座改变你对住宅想象的超越作品 极至的资源整合 丰富住家的生活内涵</p>
                     </div>
@@ -28,11 +26,6 @@
         </div>
         <div class="item item-two" style="background-image:url(/img/bg/slide2.jpg)">
             <div class="container">
-                <div class="home-content">
-                    <h1>缔造</h1>
-                    <h2>不落幕的居家风景</h2>
-                    <!--<a href="#" class="btn btn-primary btn-animated">Lets Start</a>-->
-                </div>
             </div>
         </div>
         <div class="item item-three" style="background-image:url(/img/bg/slide3.jpg)">
@@ -41,8 +34,8 @@
                     <div class="row">
                         <div class="col-md-8 col-sm-6">
                             <div class="home-content">
-                                <h1>让您</h1>
-                                <h2>体会一种尊崇感受</h2>
+                                <h1>用创意</h1>
+                                <h2>诠释最美的风景</h2>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
@@ -80,12 +73,11 @@
     <a class="carousel-right" href="#home-section-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
 </div>
 <!--/#home-section-->
-
 <div id="welcome-section" class="padding">
     <div class="container">
         <div class="text-center section-title">
-            <h1>墨千景观 全心以赴</h1>
-            <h2>圆您都市花园生活梦</h2>
+            <h1>共筑绿梦 全心以赴</h1>
+            <h2>墨千风景 有你有我</h2>
         </div>
         <div class="welcome-content">
             <div class="row">
@@ -108,13 +100,26 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="welcome-info">
                         <p>
-                            景观设计是一个综合的整体，它是在一定的经济条件下实现的，要满足社会的功能，也要符合自然的规律，遵循生态原则，同时还要属于艺术的范畴。因此我们的设计原则是关乎人、关乎生态、关乎艺术的——
+                            景观设计是一个综合的整体，它是在一定的经济条件下实现的，要满足社会的功能，也要符合自然的规律，遵循生态原则，同时还要属于艺术的范畴。因此我们的设计原则是关乎人、关乎生态、关乎艺术的。
                         </p>
                         <!-- <a href="#">Download Our Brochures</a>-->
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div id="video-promotion" class="image-bg">
+    <div class="container text-center">
+        <h1>
+                
+                <video class="video-link" width="900" height="506" controls poster="/video/poster.jpg">
+                <source src="/video/yidexun.mp4" type="video/mp4" >
+                </video>
+                <!--
+                <a class="video-link" href="/video/yidexun.mp4">漫游<span></span>展示</a>
+                -->
+            </h1>
     </div>
 </div>
 <div id="recent-projects" class="padding">
@@ -129,7 +134,7 @@
                     <div class="project-content">
                         <div class="project-title">
                             <h3>商业屋顶花园景观设计&nbsp;&nbsp;&nbsp;&nbsp;</h3>
-                           <!-- <span>客户: 上海市政府</span>-->
+                            <!-- <span>客户: 上海市政府</span>-->
                         </div>
                         <div class="project-item">
                             <a href="/img/project/syw/8.jpg" class="image-link">
@@ -144,13 +149,12 @@
                     <div class="project-content">
                         <div class="project-title">
                             <h3>南京大泉湖·枫彩四季枫情生态观光园</h3>
-                           
                         </div>
                         <div class="project-item">
                             <a href="/img/project/njdqh/1.jpg" class="image-link"><img class="img-responsive" src="/img/project/njdqh/1.jpg" alt=""></a>
                         </div>
                         <div class="project-info">
-                            <p>以水作为核心元素进行发想，以创造五彩泡泡家园梦幻旅程为设计核心理念</p>
+                            <p>以水作为核心元素，以创造五彩泡泡家园梦幻旅程为设计核心理念</p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +164,6 @@
                             <h3>崇明康养休闲度假园
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </h3>
-                            
                         </div>
                         <div class="project-item">
                             <a href="/img/project/cmky/1.jpg" class="image-link"><img class="img-responsive" src="/img/project/cmky/1.jpg" alt=""></a>
@@ -176,14 +179,13 @@
                             <h3>舟山花鸟岛主题民宿
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </h3>
-                           
                         </div>
                         <div class="project-item">
                             <a href="/img/project/zshd/1.jpg" class="image-link"><img class="img-responsive" src="/img/project/zshd/1.jpg" alt=""></a>
                         </div>
                         <div class="project-info">
                             <p>
-                                是基于多年国际化的设计和建造经验，整合多方资源开创的全新的创意儿童主题空间产品品牌。
+                                是基于多年国际化的设计和建造经验，整合多方资源开创的全新的创意主题空间产品品牌。
                             </p>
                         </div>
                     </div>
@@ -193,7 +195,7 @@
     </div>
 </div>
 <!--/#Recent projects-->
-
+<!--
 <div id="amazing-features" class="padding">
     <div class="container">
         <div class="col-md-6">
@@ -204,7 +206,7 @@
                     “生态景观”一直是人们关心的热点，也是景观设计的核心。我们用植物妆点庭园，营造舒适宜人的小气候；我们用水滋润庭园，让它来维持景观和生物的多样性；我们用山石和岩矿点缀庭园，以唤起人们对摩天大楼与水..
                 </p>
             </div>
-            <!--
+           
             <div class="amazing-features">
                 <div class="features">
                     <h4><i class="fa fa-coffee"></i> Power of Flexibility</h4>
@@ -215,25 +217,24 @@
                     <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim <br>justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
                 </div>
             </div>
-            -->
-        </div>
-        <div class="col-md-6">
-            <div class="twentytwenty-wrapper twentytwenty-horizontal">
-                <div class="layer-slide twentytwenty-container" style="height: 333px;">
-                    <img class="img-responsive twentytwenty-before" src="/img/project/art/layer.jpg" alt="" style="clip: rect(0px 270px 333px 0px);">
-                    <img class="img-responsive twentytwenty-after" src="/img/project/art/layer-bg.jpg" alt="">
-                    <div class="twentytwenty-overlay">
-                        <div class="twentytwenty-before-label"></div>
-                        <div class="twentytwenty-after-label"></div>
-                    </div>
-                    <div class="twentytwenty-handle" style="left: 270px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div>
-                </div>
+            
+        </div>-->
+<div class="col-md-6">
+    <div class="twentytwenty-wrapper twentytwenty-horizontal">
+        <div class="layer-slide twentytwenty-container" style="height: 333px;">
+            <img class="img-responsive twentytwenty-before" src="/img/project/art/layer.jpg" alt="" style="clip: rect(0px 270px 333px 0px);">
+            <img class="img-responsive twentytwenty-after" src="/img/project/art/layer-bg.jpg" alt="">
+            <div class="twentytwenty-overlay">
+                <div class="twentytwenty-before-label"></div>
+                <div class="twentytwenty-after-label"></div>
             </div>
+            <div class="twentytwenty-handle" style="left: 270px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div>
         </div>
     </div>
 </div>
+</div>
+</div>
 <!--/#amazing-features-->
-
 <div id="fun-facts" class="padding fun-facts-two">
     <div class="overlay-bg"></div>
     <div class="container">
@@ -264,7 +265,6 @@
     </div>
 </div>
 <!--/#fun-facts-->
-
 <div id="blog" class="padding">
     <div class="container">
         <div class="row">
@@ -313,7 +313,6 @@
     </div>
 </div>
 <!--/#blog-->
-
 <div id="twitter" class="padding">
     <div class="overlay-bg"></div>
     <div class="container text-center">
@@ -329,24 +328,20 @@
             <div class="carousel-inner">
                 <div class="item">
                     <p>墨千景观，坚信优秀的设计可以引导人们对美好生活方式的追求。我们的愿景，为您缔造一方美学空间</p>
-
                 </div>
                 <div class="item active">
                     <p>墨千景观，主张将设计语言融入自然环境，减少人为设计痕迹，摒弃不切实际的设计堆砌，强调行业内的多专业融合。</p>
-
                 </div>
                 <div class="item">
                     <p>
                         设计应人与自然并重，并探索景观之纯美，提倡运用现当代设计语言表达中国文化以及景观之美。
                     </p>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!--/twitter-->
-
 <div id="clients" class="padding">
     <div class="container">
         <div class="row">
@@ -358,23 +353,36 @@
         <div class="clients text-center">
             <ul class="list-inline">
                 <li>
-                    <a href="#"><img class="img-responsive" src="http://themeregion.com/demo/arki/default-images/others/client1.png" alt=""></a>
+                    <a href="#"><img class="img-responsive" src="/img/partner/fengcaijituan.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img class="img-responsive" src="http://themeregion.com/demo/arki/default-images/others/client2.png" alt=""></a>
+                    <a href="#"><img class="img-responsive" src="/img/partner/cunyouwangluo.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img class="img-responsive" src="http://themeregion.com/demo/arki/default-images/others/client3.png" alt=""></a>
+                    <a href="#"><img class="img-responsive" src="/img/partner/dongjiezhineng.png" alt=""></a>
                 </li>
                 <li>
-                    <a href="#"><img class="img-responsive" src="http://themeregion.com/demo/arki/default-images/others/client4.png" alt=""></a>
+                    <a href="#"><img class="img-responsive" src="/img/partner/jiyinkeji.png" alt=""></a>
+                </li>
+            </ul>
+            <ul class="list-inline">
+                <li>
+                    <a href="#"><img class="img-responsive" src="/img/partner/chengyushangcheng.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img class="img-responsive" src="/img/partner/langao.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img class="img-responsive" src="/img/partner/jicheng.png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#"><img class="img-responsive" src="/img/partner/jicaijiaoyu.png" alt=""></a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
 <!--/Clients-->
-
 <div id="promotion" class="padding promo-image-bg">
     <div class="overlay-bg"></div>
     <div class="container text-center">

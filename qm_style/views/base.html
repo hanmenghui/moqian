@@ -25,11 +25,11 @@
     {%block head%}
     <!--js/css-->
     {%endblock%}
+    <style type="text/css">
 
+    </style>
 </head>
 <!---->
-
-
 <!--end-->
 
 <body>
@@ -41,49 +41,40 @@
                 <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                         <a class="navbar-brand" href="/">
                             <img class="main-logo img-responsive" src="/img/logo_big.png" alt="">
                             <img class="logo-two img-responsive" src="/img/logo_small.png" alt="">
                         </a>
-
                     </div>
                     <div class="top-bar">
                         <ul class="list-inline social-icons">
                             <li><a href="http://weibo.com/u/5818416125" target="_blank"><i class="fa fa-weibo"></i></a></li>
                             <li><a href="http://wpa.qq.com/msgrd?v=3&uin=332967248&site=qq&menu=yes" target="_blank"><i class="fa fa-qq"></i></a></li>
-
                         </ul>
-
                     </div>
                     <nav id="main-menu" class="collapse navbar-collapse navbar-right">
                         <ul class="nav navbar-nav">
                             <li class="active">
                                 <a href="/" class="dropdown-toggle">
                                 首页
-							</a>
+                            </a>
                             </li>
-
                             <li class="">
                                 <a href="/project" class="dropdown-toggle">
                                 项目案例
                             </a>
                             </li>
-
                             <li><a href="/aboutus">关于我们</a></li>
                         </ul>
                     </nav>
-
                 </div>
-
             </div>
         </header>
-
         {%block body%} {%endblock%}
         <footer id="footer">
             <div class="container">
@@ -93,20 +84,19 @@
                             <div class="footer-widget">
                                 <a class="logo" href="#"><img class="img-responsive" src="/img/logo_small.png" alt=""></a>
                                 <p>
-                                 墨千景观在旅游规划设计、商业景观、居住景观方面具备超前的设计理念和实力，近年来参与了多个农庄旅游规划设计、商业屋顶花园、高端私家会所景观设计。
+                                    墨千景观在旅游规划设计、商业景观、居住景观方面具备超前的设计理念和实力，近年来参与了多个农庄旅游规划设计、商业屋顶花园、高端私家会所景观设计。
                                 </p>
                                 <address>
-								<ul>
-									<li><span>地址:</span>上海市宝山区三泉路 1941号1楼112室</li>
-									<li><span>电话:</span>+150 0079 9835</li>
-									<li><span>邮箱:</span><a href="#">332967248@qq.com</a></li>
-								</ul>
-							</address>
+                                    <ul>
+                                        <li><span>地址:</span>上海市宝山区美丹路上置美兰优湖金座6楼</li>
+                                        <li><span>电话:</span><a href="tel:15000799835">150 0079 9835（李经理）</a></li>
+                                        <li><span>邮箱:</span><a href="mailto:332967248@qq.com">332967248@qq.com</a></li>
+                                    </ul>
+                                </address>
                                 <div class="socials">
                                     <ul class="list-inline social-icons">
                                         <li><a href="http://weibo.com/u/5818416125"><i class="fa fa-weibo"></i></a></li>
                                         <li><a href="#"><i class="fa fa-qq"></i></a></li>
-
                                     </ul>
                                 </div>
                             </div>
@@ -118,21 +108,19 @@
                                     <li><a href="#">关于我们</a></li>
                                     <li><a href="#">项目工程</a></li>
                                     <li><a href="#">工作机会</a></li>
-                                    <li><a href="#">联系我们</a></li>
-
                                 </ul>
                             </div>
                         </div>
                         <div class="col-sm-3">
                             <div class="footer-widget">
-                                <h2>友情链接</h2>
+                                <h2>关注我们</h2>
                                 <ul>
-                                    <li><a href="#"></a></li>
-                                    <li><a href="#"></a></li>
-
+                                    <li><a target="_blank" href="https://weibo.com/moqianart">新浪微博</a></li>
+                                    <li><a id="cpqrcode" style="cursor: pointer;">官方微信</a></li>
                                 </ul>
                             </div>
                         </div>
+                        <!--
                         <div class="col-sm-3">
                             <div class="footer-widget instagram">
                                 <h2>Instagram</h2>
@@ -158,6 +146,7 @@
                                 </ul>
                             </div>
                         </div>
+                    -->
                     </div>
                 </div>
             </div>
@@ -167,13 +156,26 @@
                 </div>
             </div>
         </footer>
+        <div id="payqrcode" style="width: 100%; position: absolute; top: 298px; text-align: center; vertical-align: middle;display:none">
+            <div style="display: inline-block;width: 390px;
+            background-color: #666;text-align: center;padding: 10px 0; position: fixed;z-index: 999">
+             <div style="float: right;padding-right: 10px;">
+                <a id="closeqr" style="color: white; cursor: pointer;">X<a></div>
+                <div style="width: 100%;text-align: center;margin-left: 20px;font-size: 16px;color: #fff">墨千景观官方微信</div>
+
+                <div style="display: inline-block;padding: 10px;margin: 20px; margin-bottom: 8px; background-color: #fff;" id="qrcode" title="weixin://wxpay/bizpayurl?pr=MABCWbq">
+                    <canvas width="240" height="240" style="display: none;"></canvas>
+                    <img style="width:333px;height:333px" src="/img/wechag-company-qrcode.jpg" />
+                </div>
+                <p style="color: #fff;font-weight: 500;font-size: 16px">打开微信，点击右上角的“+”，选择“扫一扫”功能，用摄像头对准下方二维码即可。</p>
+            </div>
+        </div>
         {%if not isIndex%}
     </div>
     {%endif%}
     <script src="/js/vendor/jquery-1.11.3.min.js"></script>
     <script src='/js/vendor/bootstrap.min.js'></script>
     <!--/#scripts-->
-
     <script type="text/javascript" src="/js/vendor/jquery.parallax.js"></script>
     <script type="text/javascript" src="/js/vendor/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="/js/vendor/jquery.nav.js"></script>
@@ -184,7 +186,18 @@
     <script type="text/javascript" src="/js/vendor/jquery.inview.min.js"></script>
     <script type="text/javascript" src="/js/vendor/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript">
+    $("#cpqrcode").click(function() {
+        $("#payqrcode").show();
+    });
+    $("#closeqr").click(function(){
+         $("#payqrcode").hide();
+    });
+    $(body).click(function(){
+        alert("12");
+    });
 
+    </script>
 </body>
 <!--参考：http://demo.themeregion.com/arki/Arki-default/index-slider.html-->
 

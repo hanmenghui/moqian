@@ -105,6 +105,18 @@ h6 {
     padding: 80px 0;
 }
 
+.mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    background: #000;
+    opacity: .518;
+}
+
 .section-title {
     margin-bottom: 40px;
     padding-bottom: 0;
@@ -423,6 +435,8 @@ textarea.form-control {
 
 .navbar-fixed-top .logo-two,
 #page .logo-two {
+    width: 360px;
+    height: 62px;
     display: block;
 }
 
@@ -1516,7 +1530,7 @@ textarea.form-control {
 }
 
 #fun-facts.fun-facts-two {
-    background-image: url(http://themeregion.com/demo/arki/default-images/bg/fun-bg2.jpg);
+    background-image: url(/img/fun-bg2.jpg);
     position: relative;
 }
 
@@ -1623,7 +1637,7 @@ textarea.form-control {
 ==========================*/
 
 #twitter {
-    background-image: url("http://themeregion.com/demo/arki/default-images/bg/twitter-bg.jpg");
+    background-image: url("/img/tuiguang_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 20px;
@@ -1634,7 +1648,7 @@ textarea.form-control {
 }
 
 #twitter .overlay-bg {
-    background-color: rgba(0, 174, 239, 0.90);
+   background-color: rgba(0, 0, 0, 0.75);
 }
 
 #twitter-carousel {
@@ -1723,14 +1737,14 @@ textarea.form-control {
 #promotion {
     background-color: #35ac69;
     color: #fff;
-    background-image: url(http://themeregion.com/demo/arki/default-images/others/promo-bg.jpg);
+    background-image: url(/img/promo-bg2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
 
 #promotion.promo-image-bg {
-    background-image: url(http://themeregion.com/demo/arki/default-images/others/promo-bg2.jpg);
+    background-image: url(/img/promo-bg2.jpg);
     position: relative;
 }
 
@@ -1799,7 +1813,7 @@ textarea.form-control {
 }
 
 .footer-widget address li {
-    padding-left: 100px;
+    padding-left: 50px;
     margin-bottom: 10px;
 }
 
@@ -1994,7 +2008,7 @@ textarea.form-control {
     color: #fff;
     background-color: #CD3057;
     background-image: url(../images/about-us/video-bg.jpg);
-    padding: 190px 0 230px;
+    /*padding: 190px 0 230px;*/
 }
 
 #video-promotion h1 {
