@@ -2007,7 +2007,7 @@ textarea.form-control {
 #video-promotion {
     color: #fff;
     background-color: #CD3057;
-    background-image: url(../images/about-us/video-bg.jpg);
+    background-image: url(/img/video-bg.jpg);
     /*padding: 190px 0 230px;*/
 }
 
