@@ -1,4 +1,4 @@
-const Koa = require('koa'); //引入koa server
+const Koa = require('koa'); //引入koa Server
 
 const router = require('koa-router')(); /// 引入koa-router，使用其提供的 get post
 
