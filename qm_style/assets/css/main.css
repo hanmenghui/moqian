@@ -2008,6 +2008,8 @@ textarea.form-control {
     color: #fff;
     background-color: #CD3057;
     background-image: url(/img/video-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     /*padding: 190px 0 230px;*/
 }
 
